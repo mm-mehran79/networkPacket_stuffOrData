@@ -28,11 +28,12 @@ module stuff_or_data
 //--------------------------------------- reg deceleration
     reg [MPT_W+1:0] x1_s2, x1_s3, x1_s4 , cm2_pm , cm2_pm2, x1_s3_pm, x1_s3_2pm, x1_s4_pm, x1_s4_2pm;
     reg [MPT_W-1:0] cm_fetched, pm_fetched;
-    reg [MPT_W:0] cm_negetive;
-    reg [MPT_W-1:0] counter, x2_s3, x2_s4;
+    reg [MPT_W:0] cm_pm;
+    reg [MPT_W-1:0] counter, x2_s3, x2_s4, g1, g2;
+    reg ds_s3raw, ds_s4raw;
 //-------------------------------------------------------
 //--------------------------------------- wire deceleration
-    wire [MPT_W:0] s3_final, s4_final;
+    // wire [MPT_W:0] s3_final, s4_final;
     // wire [MPT_W-1:0] g1,g2;
 //-------------------------------------------------------
 
@@ -50,6 +51,7 @@ module stuff_or_data
                 cm_fetched <= cm;
                 cm2_pm <= {cm,1'b0} - pm;
                 cm2_pm2 <= {cm,1'b0} - {pm,1'b0};
+                cm_pm <= cm - pm;
                 if (sof) begin
                     // err_sof_late <= 0;
                     state <= S1;
@@ -66,12 +68,12 @@ module stuff_or_data
                 if (valid_in) begin
                     valid_out <= 1;
                     counter <= counter + 1;
-                    cm_negetive <= -cm_fetched;
                     ds <= &(cm_fetched~^pm_fetched);
                     x1_s2 <= cm2_pm[MPT_W+1]?{cm_fetched,1'b0}:cm2_pm;
                     x1_s3 <= {cm_fetched,1'b0} + cm_fetched;
                     x1_s3_pm <= cm_fetched + cm2_pm;
                     x1_s3_2pm <= cm_fetched + cm2_pm2;
+                    {ds_s3raw, g1} <= cm_fetched + cm_pm;
                     state <= &(counter~^pm_fetched)?FETCH:&(cm_fetched~^pm_fetched)?S1:S2;
                 end else begin
                     valid_out <= 0;
@@ -89,6 +91,7 @@ module stuff_or_data
                     x1_s4 <= x1_s2 + {cm_fetched, 1'b0};
                     x1_s4_pm <= x1_s2 + cm2_pm;
                     x1_s4_2pm <= x1_s2 + cm2_pm2;
+                    {ds_s4raw, g2} <= x1_s2 + cm_pm;
                     state <= &(counter~^pm_fetched)?FETCH:S3;
                 end else begin
                     valid_out <= 0;
@@ -100,11 +103,12 @@ module stuff_or_data
                 if (valid_in) begin
                     valid_out <= 1;
                     counter <= counter + 1;
-                    ds <=  s3_final[MPT_W]^cm_negetive[MPT_W];
+                    ds <=  x1_s3_2pm[MPT_W+1]?(x1_s3_pm[MPT_W+1]?0:ds_s3raw):1;;
                     x1_s3 <= x2_s3 + {cm_fetched, 1'b0};
                     x1_s3_pm <= x2_s3 + cm2_pm;
                     x1_s3_2pm <= x2_s3 + cm2_pm2;
                     x2_s4 <= x1_s4_2pm[MPT_W+1]?(x1_s4_pm[MPT_W+1]?x1_s4:x1_s4_pm):x1_s4_2pm;
+                    {ds_s3raw, g1} <= x2_s3 + cm_pm;
                     state <= &(counter~^pm_fetched)?FETCH:S4;
                 end else begin
                     valid_out <= 0;
@@ -116,8 +120,9 @@ module stuff_or_data
                 if (valid_in) begin
                     valid_out <= 1;
                     counter <= counter + 1;
-                    ds <= s4_final[MPT_W]^cm_negetive[MPT_W];
+                    ds <= x1_s4_2pm[MPT_W+1]?(x1_s4_pm[MPT_W+1]?0:ds_s4raw):1;
                     x2_s3 <= x1_s3_2pm[MPT_W+1]?(x1_s3_pm[MPT_W+1]?x1_s3:x1_s3_pm):x1_s3_2pm;
+                    {ds_s4raw, g2} <= x2_s4 + cm_pm;
                     x1_s4 <=  x2_s4 + {cm_fetched, 1'b0};
                     x1_s4_pm <=  x2_s4 + cm2_pm;
                     x1_s4_2pm <=  x2_s4 + cm2_pm2;
@@ -132,8 +137,8 @@ module stuff_or_data
     end
 //-------------------------------------------------------
 //--------------------------------------- sequential Logic
-    assign s3_final = x2_s3 + cm_negetive[MPT_W-1:0];
-    assign s4_final = x2_s4 + cm_negetive[MPT_W-1:0];
+    // assign s3_final = x2_s3 + cm_pm[MPT_W-1:0];
+    // assign s4_final = x2_s4 + cm_pm[MPT_W-1:0];
 //-------------------------------------------------------
 
 endmodule

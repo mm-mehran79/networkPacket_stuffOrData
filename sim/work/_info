@@ -18,6 +18,7 @@ Z2 o-quiet -auto_acc_if_foreign -work work +acc
 Z3 tCvgOpt 0
 n@_opt
 Z4 OL;O;2020.4;71
+R0
 T_opt1
 !s110 1661474112
 VD?gm^:D8Kn3Xl3c?Y]2Yh2
@@ -28,36 +29,46 @@ R3
 n@_opt1
 R4
 R0
+T_opt2
+!s110 1661682532
+Vz6C>VgHAITVKm<48CHP;c0
+R1
+=1-bcee7b52761e-630b4362-2f1-e90
+R2
+R3
+n@_opt2
+R4
 vstuff_or_data
+!s10a 1661682383
 Z5 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-!s110 1661528636
+!s110 1661682400
 !i10b 1
-!s100 bknb0zhERzh6OoP0F_VMM0
+!s100 nZ[l]4eRVGaS7^[N7VKd@1
 Z6 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I<oaFdGK<Ne=MhoFINcWnS2
+IhC=z2;>S@KL6<;?fQ2faW1
 S1
-R0
-w1661528540
-Z7 8../src/hdl/stuff_or_data.sv
-Z8 F../src/hdl/stuff_or_data.sv
-!i122 45
-L0 11 129
-Z9 VDg1SIo80bB@j0V0VzS_@n1
-Z10 OL;L;2020.4;71
+Z7 dH:/Parman/networkPacket_stuffOrData/sim
+w1661682383
+Z8 8../src/hdl/stuff_or_data.sv
+Z9 F../src/hdl/stuff_or_data.sv
+!i122 51
+L0 11 134
+Z10 VDg1SIo80bB@j0V0VzS_@n1
+Z11 OL;L;2020.4;71
 r1
 !s85 0
 31
-!s108 1661528635.000000
-Z11 !s107 ../src/hdl/stuff_or_data_top.sv|../src/hdl/stuff_or_data_theBest.sv|../src/hdl/stuff_or_data_met.sv|../src/hdl/stuff_or_data_300MHz.sv|../src/hdl/stuff_or_data_200MHz.sv|../src/hdl/stuff_or_data.sv|
-Z12 !s90 -reportprogress|300|-64|-vopt|-sv|+acc|-incr|-source|+define+SIM|+PATH=..|../src/hdl/stuff_or_data.sv|../src/hdl/stuff_or_data_200MHz.sv|../src/hdl/stuff_or_data_300MHz.sv|../src/hdl/stuff_or_data_met.sv|../src/hdl/stuff_or_data_theBest.sv|../src/hdl/stuff_or_data_top.sv|
+!s108 1661682400.000000
+Z12 !s107 ../src/hdl/stuff_or_data_top.sv|../src/hdl/stuff_or_data_theBest.sv|../src/hdl/stuff_or_data_met.sv|../src/hdl/stuff_or_data_300MHz.sv|../src/hdl/stuff_or_data_200MHz.sv|../src/hdl/stuff_or_data.sv|
+Z13 !s90 -reportprogress|300|-64|-vopt|-sv|+acc|-incr|-source|+define+SIM|+PATH=..|../src/hdl/stuff_or_data.sv|../src/hdl/stuff_or_data_200MHz.sv|../src/hdl/stuff_or_data_300MHz.sv|../src/hdl/stuff_or_data_met.sv|../src/hdl/stuff_or_data_theBest.sv|../src/hdl/stuff_or_data_top.sv|
 !i113 0
-Z13 o-64 -sv +acc -source +PATH=.. -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z14 !s92 -64 -sv +acc -source +define+SIM +PATH=.. -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z14 o-64 -sv +acc -source +PATH=.. -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z15 !s92 -64 -sv +acc -source +define+SIM +PATH=.. -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R3
 vstuff_or_data_200MHz
-!s10a 1661235789
+Z16 !s10a 1661670074
 R5
-Z15 !s110 1661342784
+Z17 !s110 1661342784
 !i10b 1
 !s100 i:C6Y3h=N?:l5EiHoE=?T1
 R6
@@ -69,23 +80,23 @@ w1661235789
 F../src/hdl/stuff_or_data_200MHz.sv
 !i122 0
 L0 11 59
-R9
 R10
+R11
 r1
 !s85 0
 31
-Z16 !s108 1661342783.000000
-Z17 !s107 ../src/hdl/stuff_or_data_top.sv|../src/hdl/stuff_or_data_300MHz_Adder_2input.sv|../src/hdl/stuff_or_data_200MHz.sv|../src/hdl/stuff_or_data.sv|
-Z18 !s90 -reportprogress|300|-64|-vopt|-sv|+acc|-incr|-source|+define+SIM|+PATH=..|../src/hdl/stuff_or_data.sv|../src/hdl/stuff_or_data_200MHz.sv|../src/hdl/stuff_or_data_300MHz_Adder_2input.sv|../src/hdl/stuff_or_data_top.sv|
+Z18 !s108 1661342783.000000
+Z19 !s107 ../src/hdl/stuff_or_data_top.sv|../src/hdl/stuff_or_data_300MHz_Adder_2input.sv|../src/hdl/stuff_or_data_200MHz.sv|../src/hdl/stuff_or_data.sv|
+Z20 !s90 -reportprogress|300|-64|-vopt|-sv|+acc|-incr|-source|+define+SIM|+PATH=..|../src/hdl/stuff_or_data.sv|../src/hdl/stuff_or_data_200MHz.sv|../src/hdl/stuff_or_data_300MHz_Adder_2input.sv|../src/hdl/stuff_or_data_top.sv|
 !i113 0
-R13
 R14
+R15
 R3
 nstuff_or_data_200@m@hz
 vstuff_or_data_300MHz
-!s10a 1661446978
+R16
 R5
-Z19 !s110 1661454094
+Z21 !s110 1661454094
 !i10b 1
 !s100 FZ8lEZd:e1?W4EhE;LOTc1
 R6
@@ -96,24 +107,24 @@ w1661446978
 8../src/hdl/stuff_or_data_300MHz.sv
 F../src/hdl/stuff_or_data_300MHz.sv
 !i122 16
-Z20 L0 11 104
-R9
+Z22 L0 11 104
 R10
+R11
 r1
 !s85 0
 31
-Z21 !s108 1661454093.000000
-Z22 !s107 ../src/hdl/stuff_or_data_top.sv|../src/hdl/stuff_or_data_300MHz.sv|../src/hdl/stuff_or_data_200MHz.sv|../src/hdl/stuff_or_data.sv|
-Z23 !s90 -reportprogress|300|-64|-vopt|-sv|+acc|-incr|-source|+define+SIM|+PATH=..|../src/hdl/stuff_or_data.sv|../src/hdl/stuff_or_data_200MHz.sv|../src/hdl/stuff_or_data_300MHz.sv|../src/hdl/stuff_or_data_top.sv|
+Z23 !s108 1661454093.000000
+Z24 !s107 ../src/hdl/stuff_or_data_top.sv|../src/hdl/stuff_or_data_300MHz.sv|../src/hdl/stuff_or_data_200MHz.sv|../src/hdl/stuff_or_data.sv|
+Z25 !s90 -reportprogress|300|-64|-vopt|-sv|+acc|-incr|-source|+define+SIM|+PATH=..|../src/hdl/stuff_or_data.sv|../src/hdl/stuff_or_data_200MHz.sv|../src/hdl/stuff_or_data_300MHz.sv|../src/hdl/stuff_or_data_top.sv|
 !i113 0
-R13
 R14
+R15
 R3
 nstuff_or_data_300@m@hz
 vstuff_or_data_A
 !s10a 1661343322
 R5
-R15
+R17
 !i10b 1
 !s100 HHV4AOf_HB8gieR<oJUV83
 R6
@@ -124,22 +135,22 @@ w1661342745
 8../src/hdl/stuff_or_data_300MHz_Adder_2input.sv
 F../src/hdl/stuff_or_data_300MHz_Adder_2input.sv
 !i122 0
-R20
-R9
+R22
 R10
+R11
 r1
 !s85 0
 31
-R16
-R17
 R18
+R19
+R20
 !i113 0
-R13
 R14
+R15
 R3
 nstuff_or_data_@a
 vstuff_or_data_met
-!s10a 1661479438
+R16
 R5
 !s110 1661479668
 !i10b 1
@@ -153,17 +164,17 @@ w1661479438
 F../src/hdl/stuff_or_data_met.sv
 !i122 29
 L0 11 138
-R9
 R10
+R11
 r1
 !s85 0
 31
 !s108 1661479667.000000
-R11
 R12
-!i113 0
 R13
+!i113 0
 R14
+R15
 R3
 vstuff_or_data_out
 !s10a 1661480005
@@ -176,43 +187,42 @@ IXHC:PB0[To?QYQ9b?XzG?1
 S1
 R0
 w1661480005
-R7
 R8
+R9
 !i122 31
 L0 11 140
-R9
 R10
+R11
 r1
 !s85 0
 31
 !s108 1661480020.000000
-R11
 R12
-!i113 0
 R13
+!i113 0
 R14
+R15
 R3
 vstuff_or_data_tb
-!s10a 1661509922
 R5
-!s110 1661511077
+!s110 1661682520
 !i10b 1
 !s100 JBmm8`eMcBbH>4boMbheK2
 R6
 IBf9kGe`XG6@:3cbCWE_XD3
 S1
-R0
-w1661509922
+R7
+w1661682510
 8tb/stuff_or_data_tb.sv
 Ftb/stuff_or_data_tb.sv
-!i122 41
+!i122 52
 L0 11 62
-R9
 R10
+R11
 r1
 !s85 0
 31
-!s108 1661511076.000000
+!s108 1661682519.000000
 !s107 tb/stuff_or_data_tb.sv|
 !s90 -reportprogress|300|-64|-vopt|-sv|+acc|-incr|-source|+define+SIM|tb/stuff_or_data_tb.sv|
 !i113 0
@@ -220,37 +230,37 @@ o-64 -sv +acc -source -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infac
 !s92 -64 -sv +acc -source +define+SIM -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R3
 vstuff_or_data_theBest
-!s10a 1661505921
+R16
 R5
-!s110 1661506590
+!s110 1661680785
 !i10b 1
-!s100 ;8_iC`CMIKKb;@2d`S1KL1
+!s100 obI0TN4:Nm0nOfB^oOII11
 R6
-Ii`VmFYKC9UdM9kgHa1YAB1
+I2SFGO:=1OHXe0L<f_GgSc0
 S1
-R0
-w1661505921
+R7
+w1661670074
 8../src/hdl/stuff_or_data_theBest.sv
 F../src/hdl/stuff_or_data_theBest.sv
-!i122 35
-L0 11 128
-R9
+!i122 46
+L0 11 129
 R10
+R11
 r1
 !s85 0
 31
-!s108 1661506589.000000
-R11
+!s108 1661680784.000000
 R12
-!i113 0
 R13
+!i113 0
 R14
+R15
 R3
 nstuff_or_data_the@best
 vstuff_or_data_top
-!s10a 1661447153
+R16
 R5
-R19
+R21
 !i10b 1
 !s100 EddMOAZj:o;9^_`jl8<533
 R6
@@ -262,15 +272,15 @@ w1661447153
 F../src/hdl/stuff_or_data_top.sv
 !i122 16
 L0 2 39
-R9
 R10
+R11
 r1
 !s85 0
 31
-R21
-R22
 R23
+R24
+R25
 !i113 0
-R13
 R14
+R15
 R3

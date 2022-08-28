@@ -1,0 +1,14 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|              sys_clk_pin |              sys_clk_pin |                                                                                        uut/ds_s3raw_reg/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                         uut/FSM_sequential_state_reg[2]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                                              uut/ds_reg/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                         uut/FSM_sequential_state_reg[1]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                                     uut/x1_s4_pm_reg[7]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                                    uut/x1_s3_2pm_reg[9]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                                     uut/x1_s4_pm_reg[9]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                                    uut/x1_s4_2pm_reg[6]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                                    uut/x1_s4_2pm_reg[7]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                                    uut/x1_s3_2pm_reg[5]/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
