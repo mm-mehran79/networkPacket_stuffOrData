@@ -32,13 +32,9 @@ module stuff_or_data
     reg [MPT_W-1:0] counter, x2_s3, x2_s4, g1, g2;
     reg ds_s3raw, ds_s4raw;
 //-------------------------------------------------------
-//--------------------------------------- wire deceleration
-    // wire [MPT_W:0] s3_final, s4_final;
-    // wire [MPT_W-1:0] g1,g2;
 //-------------------------------------------------------
 
     enum { FETCH, S1, S2, S3, S4 } state;
-    //localparam FETCH = 0, S1 = 1, S2 = 2, S3 = 3, S4 = 4; // state machine's states
 
 //--------------------------------------- sequential Logic
     always @( posedge clk ) begin
@@ -135,10 +131,5 @@ module stuff_or_data
             end 
         endcase
     end
-//-------------------------------------------------------
-//--------------------------------------- sequential Logic
-    // assign s3_final = x2_s3 + cm_pm[MPT_W-1:0];
-    // assign s4_final = x2_s4 + cm_pm[MPT_W-1:0];
-//-------------------------------------------------------
 
 endmodule
