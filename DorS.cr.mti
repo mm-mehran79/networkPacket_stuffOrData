@@ -1,0 +1,15 @@
+H:/Parman/DorS/stuff_or_data.v {1 {vlog -work work -vopt -stats=none H:/Parman/DorS/stuff_or_data.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module stuff_or_data
+
+Top level modules:
+	stuff_or_data
+
+} {} {}} H:/Parman/DorS/stuff_or_data_tb.sv {1 {vlog -work work -vopt -sv -stats=none H:/Parman/DorS/stuff_or_data_tb.sv
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module stuff_or_data_tb
+
+Top level modules:
+	stuff_or_data_tb
+
+} {} {}}

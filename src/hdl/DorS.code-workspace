@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "..\\.."
+		},
+		{
+			"name": "networkPacket_stuffOrData",
+			"path": "..\\..\\..\\networkPacket_stuffOrData"
+		}
+	],
+	"settings": {}
+}
