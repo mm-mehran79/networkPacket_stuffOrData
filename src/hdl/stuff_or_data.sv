@@ -6,6 +6,7 @@
 //          
 //          delay : 1 period 
 //          
+//          pm must not be zero
 //===========================================================
 `timescale 1ns/1ns
 module stuff_or_data
@@ -49,18 +50,19 @@ module stuff_or_data
                 cm2_pm2 <= {cm,1'b0} - {pm,1'b0};
                 cm_pm <= cm - pm;
                 if (sof) begin
-                    // err_sof_late <= 0;
+                    err_sof_late <= 0;
                     state <= S1;
                     sof_out <= 1;
                     // input_err <= 0;
                 end else begin
-                    // err_sof_late <= 1;
+                    err_sof_late <= 1;
                     state <= FETCH;//vain
                     // input_err <= 1;//vain
                 end
             end
             S1:begin
                 sof_out <= 0;
+                err_sof_late <= 0;
                 if (valid_in) begin
                     valid_out <= 1;
                     counter <= counter + 1;
