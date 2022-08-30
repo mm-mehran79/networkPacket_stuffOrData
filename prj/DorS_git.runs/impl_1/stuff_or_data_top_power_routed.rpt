@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Sun Aug 28 15:14:32 2022
+| Date             : Tue Aug 30 11:36:17 2022
 | Host             : Mehran running 64-bit major release  (build 9200)
 | Command          : report_power -file stuff_or_data_top_power_routed.rpt -pb stuff_or_data_top_power_summary_routed.pb -rpx stuff_or_data_top_power_routed.rpx
 | Design           : stuff_or_data_top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.158        |
+| Total On-Chip Power (W)  | 0.150        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.020        |
+| Dynamic (W)              | 0.012        |
 | Device Static (W)        | 0.138        |
 | Effective TJA (C/W)      | 1.5          |
 | Max Ambient (C)          | 84.8         |
@@ -53,15 +53,15 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.006 |        3 |       --- |             --- |
-| Slice Logic    |     0.002 |      362 |       --- |             --- |
-|   LUT as Logic |     0.002 |      180 |    133800 |            0.13 |
+| Slice Logic    |     0.002 |      359 |       --- |             --- |
+|   LUT as Logic |     0.002 |      175 |    133800 |            0.13 |
 |   CARRY4       |    <0.001 |       37 |     33450 |            0.11 |
 |   Register     |    <0.001 |      136 |    267600 |            0.05 |
-|   Others       |     0.000 |        2 |       --- |             --- |
-| Signals        |     0.003 |      220 |       --- |             --- |
-| I/O            |     0.009 |       22 |       500 |            4.40 |
+|   Others       |     0.000 |        4 |       --- |             --- |
+| Signals        |     0.002 |      207 |       --- |             --- |
+| I/O            |    <0.001 |       25 |       500 |            5.00 |
 | Static Power   |     0.138 |          |           |                 |
-| Total          |     0.158 |          |           |                 |
+| Total          |     0.150 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Vccint    |       1.000 |     0.042 |       0.012 |      0.030 |
 | Vccaux    |       1.800 |     0.031 |       0.000 |      0.030 |
-| Vcco33    |       3.300 |     0.007 |       0.002 |      0.005 |
+| Vcco33    |       3.300 |     0.005 |       0.000 |      0.005 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -140,7 +140,7 @@ Table of Contents
 +-------------------+-----------+
 | Name              | Power (W) |
 +-------------------+-----------+
-| stuff_or_data_top |     0.020 |
+| stuff_or_data_top |     0.012 |
 |   uut             |     0.010 |
 +-------------------+-----------+
 

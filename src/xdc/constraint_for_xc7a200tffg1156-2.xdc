@@ -1,3 +1,4 @@
+## constraint file for stuff or data module on xc7a200tffg1156-2
 ## Clock signal
 set_property -dict { PACKAGE_PIN H7    IOSTANDARD LVCMOS33 } [get_ports clk ];
 create_clock -add -name sys_clk_pin -period 2.50  [get_ports clk ];
@@ -27,3 +28,7 @@ set_property -dict { PACKAGE_PIN AP31   IOSTANDARD LVCMOS33 } [get_ports sof_out
 ## valid:
 set_property -dict { PACKAGE_PIN AJ29   IOSTANDARD LVCMOS33 } [get_ports valid_in]
 set_property -dict { PACKAGE_PIN AK30   IOSTANDARD LVCMOS33 } [get_ports valid_out]
+## error pins:
+set_property -dict { PACKAGE_PIN AL30   IOSTANDARD LVCMOS33 } [get_ports input_err]
+set_property -dict { PACKAGE_PIN AM30   IOSTANDARD LVCMOS33 } [get_ports err_sof_early]
+set_property -dict { PACKAGE_PIN AL28   IOSTANDARD LVCMOS33 } [get_ports err_sof_late]

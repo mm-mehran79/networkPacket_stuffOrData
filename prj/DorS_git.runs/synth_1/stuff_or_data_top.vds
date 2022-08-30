@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sun Aug 28 15:09:49 2022
-# Process ID: 13388
+# Start of session at: Tue Aug 30 11:30:43 2022
+# Process ID: 13132
 # Current directory: H:/Parman/networkPacket_stuffOrData/prj/DorS_git.runs/synth_1
 # Command line: vivado.exe -log stuff_or_data_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source stuff_or_data_top.tcl
 # Log file: H:/Parman/networkPacket_stuffOrData/prj/DorS_git.runs/synth_1/stuff_or_data_top.vds
@@ -16,9 +16,9 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
 INFO: [Device 21-403] Loading part xc7a200tffg1156-2
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 14228 
+INFO: Helper process launched with PID 11256 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 853.340 ; gain = 183.496
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 853.191 ; gain = 183.992
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'stuff_or_data_top' [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data_top.sv:2]
 	Parameter MPT_W bound to: 8 - type: integer 
@@ -29,15 +29,22 @@ INFO: [Synth 8-6157] synthesizing module 'IBUF' [D:/Xilinx/Vivado/2019.1/scripts
 	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 INFO: [Synth 8-6155] done synthesizing module 'IBUF' (1#1) [D:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:32856]
-INFO: [Synth 8-6157] synthesizing module 'stuff_or_data' [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'stuff_or_data' [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data.sv:13]
 	Parameter MPT_W bound to: 8 - type: integer 
-INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data.sv:45]
-WARNING: [Synth 8-6014] Unused sequential element g1_reg was removed.  [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data.sv:76]
-WARNING: [Synth 8-6014] Unused sequential element g2_reg was removed.  [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data.sv:94]
-INFO: [Synth 8-6155] done synthesizing module 'stuff_or_data' (2#1) [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data.sv:11]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data.sv:60]
+WARNING: [Synth 8-6014] Unused sequential element g1_reg was removed.  [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data.sv:92]
+WARNING: [Synth 8-6014] Unused sequential element g2_reg was removed.  [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data.sv:115]
+INFO: [Synth 8-6155] done synthesizing module 'stuff_or_data' (2#1) [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data.sv:13]
+WARNING: [Synth 8-7023] instance 'uut' of module 'stuff_or_data' has 11 connections declared, but only 8 given [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data_top.sv:28]
+WARNING: [Synth 8-3848] Net input_err in module/entity stuff_or_data_top does not have driver. [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data_top.sv:12]
+WARNING: [Synth 8-3848] Net err_sof_early in module/entity stuff_or_data_top does not have driver. [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data_top.sv:13]
+WARNING: [Synth 8-3848] Net err_sof_late in module/entity stuff_or_data_top does not have driver. [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data_top.sv:14]
 INFO: [Synth 8-6155] done synthesizing module 'stuff_or_data_top' (3#1) [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data_top.sv:2]
+WARNING: [Synth 8-3331] design stuff_or_data_top has unconnected port input_err
+WARNING: [Synth 8-3331] design stuff_or_data_top has unconnected port err_sof_early
+WARNING: [Synth 8-3331] design stuff_or_data_top has unconnected port err_sof_late
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 917.051 ; gain = 247.207
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 916.309 ; gain = 247.109
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -50,10 +57,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 917.051 ; gain = 247.207
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 916.309 ; gain = 247.109
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 917.051 ; gain = 247.207
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 916.309 ; gain = 247.109
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -65,35 +72,35 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/stuff_or_data_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1039.125 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1038.738 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1039.125 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1038.738 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 1039.125 ; gain = 369.281
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:24 . Memory (MB): peak = 1038.738 ; gain = 369.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a200tffg1156-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 1039.125 ; gain = 369.281
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:24 . Memory (MB): peak = 1038.738 ; gain = 369.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 1039.125 ; gain = 369.281
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:24 . Memory (MB): peak = 1038.738 ; gain = 369.539
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data.sv:45]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data.sv:45]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data.sv:45]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data.sv:45]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data.sv:45]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data.sv:45]
-WARNING: [Synth 8-3936] Found unconnected internal register 'x1_s4_reg' and it is trimmed from '10' to '8' bits. [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data.sv:91]
-WARNING: [Synth 8-3936] Found unconnected internal register 'x1_s3_reg' and it is trimmed from '10' to '8' bits. [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data.sv:73]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data.sv:60]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data.sv:60]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data.sv:60]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data.sv:60]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data.sv:60]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data.sv:60]
+WARNING: [Synth 8-3936] Found unconnected internal register 'x1_s4_reg' and it is trimmed from '10' to '8' bits. [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data.sv:112]
+WARNING: [Synth 8-3936] Found unconnected internal register 'x1_s3_reg' and it is trimmed from '10' to '8' bits. [H:/Parman/networkPacket_stuffOrData/src/hdl/stuff_or_data.sv:89]
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'stuff_or_data'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -106,7 +113,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'stuff
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'stuff_or_data'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 1039.125 ; gain = 369.281
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 1038.738 ; gain = 369.539
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -121,25 +128,24 @@ Detailed RTL Component Info :
 +---Adders : 
 	   3 Input     10 Bit       Adders := 2     
 	   2 Input     10 Bit       Adders := 4     
-	   3 Input      9 Bit       Adders := 1     
+	   3 Input      9 Bit       Adders := 2     
 	   2 Input      9 Bit       Adders := 4     
 	   2 Input      8 Bit       Adders := 3     
 +---XORs : 
 	   2 Input      8 Bit         XORs := 2     
 +---Registers : 
 	               10 Bit    Registers := 7     
-	                9 Bit    Registers := 1     
+	                9 Bit    Registers := 2     
 	                8 Bit    Registers := 7     
-	                1 Bit    Registers := 5     
+	                1 Bit    Registers := 8     
 +---Muxes : 
 	   2 Input     10 Bit        Muxes := 1     
 	   5 Input     10 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 5     
 	   5 Input      8 Bit        Muxes := 3     
-	   5 Input      3 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 10    
-	   2 Input      1 Bit        Muxes := 2     
-	   5 Input      1 Bit        Muxes := 14    
+	  20 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   5 Input      1 Bit        Muxes := 17    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -152,25 +158,24 @@ Detailed RTL Component Info :
 +---Adders : 
 	   3 Input     10 Bit       Adders := 2     
 	   2 Input     10 Bit       Adders := 4     
-	   3 Input      9 Bit       Adders := 1     
+	   3 Input      9 Bit       Adders := 2     
 	   2 Input      9 Bit       Adders := 4     
 	   2 Input      8 Bit       Adders := 3     
 +---XORs : 
 	   2 Input      8 Bit         XORs := 2     
 +---Registers : 
 	               10 Bit    Registers := 7     
-	                9 Bit    Registers := 1     
+	                9 Bit    Registers := 2     
 	                8 Bit    Registers := 7     
-	                1 Bit    Registers := 5     
+	                1 Bit    Registers := 8     
 +---Muxes : 
 	   2 Input     10 Bit        Muxes := 1     
 	   5 Input     10 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 5     
 	   5 Input      8 Bit        Muxes := 3     
-	   5 Input      3 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 10    
-	   2 Input      1 Bit        Muxes := 2     
-	   5 Input      1 Bit        Muxes := 14    
+	  20 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   5 Input      1 Bit        Muxes := 17    
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -187,10 +192,13 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design stuff_or_data_top has unconnected port input_err
+WARNING: [Synth 8-3331] design stuff_or_data_top has unconnected port err_sof_early
+WARNING: [Synth 8-3331] design stuff_or_data_top has unconnected port err_sof_late
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/cm2_pm2_reg[0] )
 INFO: [Synth 8-3886] merging instance 'uut/cm2_pm_reg[0]' (FDE) to 'uut/pm_fetched_reg[0]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 1039.125 ; gain = 369.281
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 1038.738 ; gain = 369.539
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -202,13 +210,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:37 . Memory (MB): peak = 1039.125 ; gain = 369.281
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:39 . Memory (MB): peak = 1038.738 ; gain = 369.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:37 . Memory (MB): peak = 1039.125 ; gain = 369.281
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 1038.738 ; gain = 369.539
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -220,7 +228,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:37 . Memory (MB): peak = 1039.125 ; gain = 369.281
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:41 . Memory (MB): peak = 1038.738 ; gain = 369.539
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -244,7 +252,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 1042.410 ; gain = 372.566
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 1039.703 ; gain = 370.504
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -257,7 +265,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 1042.410 ; gain = 372.566
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 1039.703 ; gain = 370.504
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -269,25 +277,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 1042.410 ; gain = 372.566
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 1039.703 ; gain = 370.504
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 1042.410 ; gain = 372.566
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 1039.703 ; gain = 370.504
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 1042.410 ; gain = 372.566
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 1039.703 ; gain = 370.504
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 1042.410 ; gain = 372.566
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 1039.703 ; gain = 370.504
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -306,45 +314,46 @@ Report Cell Usage:
 |1     |BUFG   |     1|
 |2     |CARRY4 |    37|
 |3     |LUT1   |     2|
-|4     |LUT2   |    61|
-|5     |LUT3   |    17|
-|6     |LUT4   |    27|
-|7     |LUT5   |    49|
-|8     |LUT6   |    31|
+|4     |LUT2   |    59|
+|5     |LUT3   |    11|
+|6     |LUT4   |    24|
+|7     |LUT5   |    51|
+|8     |LUT6   |    35|
 |9     |FDRE   |   136|
 |10    |IBUF   |    19|
 |11    |OBUF   |     3|
+|12    |OBUFT  |     3|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+---------+--------------+------+
 |      |Instance |Module        |Cells |
 +------+---------+--------------+------+
-|1     |top      |              |   383|
-|2     |  uut    |stuff_or_data |   360|
+|1     |top      |              |   381|
+|2     |  uut    |stuff_or_data |   355|
 +------+---------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 1042.410 ; gain = 372.566
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 1039.703 ; gain = 370.504
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:33 . Memory (MB): peak = 1042.410 ; gain = 250.492
-Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 1042.410 ; gain = 372.566
+Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:36 . Memory (MB): peak = 1039.703 ; gain = 248.074
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 1039.703 ; gain = 370.504
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 37 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1064.590 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1055.723 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-29 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+29 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:54 . Memory (MB): peak = 1064.590 ; gain = 711.023
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1064.590 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:58 . Memory (MB): peak = 1055.723 ; gain = 701.215
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1055.723 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'H:/Parman/networkPacket_stuffOrData/prj/DorS_git.runs/synth_1/stuff_or_data_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file stuff_or_data_top_utilization_synth.rpt -pb stuff_or_data_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Aug 28 15:10:52 2022...
+INFO: [Common 17-206] Exiting Vivado at Tue Aug 30 11:31:50 2022...

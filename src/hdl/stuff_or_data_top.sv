@@ -9,9 +9,9 @@ module stuff_or_data_top
     input wire [MPT_W-1:0]cm,
     input wire valid_in,
     input wire sof,
-    // output reg input_err,
-    // output reg err_sof_early,
-    // output reg err_sof_late,
+    output reg input_err,
+    output reg err_sof_early,
+    output reg err_sof_late,
     output reg sof_out,
     output reg valid_out,
     output reg ds
