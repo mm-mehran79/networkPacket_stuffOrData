@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sun Aug 28 15:12:42 2022
+| Date         : Tue Aug 30 11:34:29 2022
 | Host         : Mehran running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file stuff_or_data_top_control_sets_placed.rpt
 | Design       : stuff_or_data_top
@@ -41,8 +41,8 @@ Table of Contents
 +--------------------+-------+
 | Total control sets |     8 |
 | >= 0 to < 4        |     1 |
-| >= 4 to < 6        |     1 |
-| >= 6 to < 8        |     0 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     1 |
 | >= 8 to < 10       |     3 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
@@ -58,10 +58,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               5 |            3 |
+| No           | No                    | No                     |               6 |            4 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |             131 |           66 |
+| Yes          | No                    | No                     |             130 |           54 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -70,17 +70,17 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+---------------+------------------------+------------------+------------------+----------------+
-|  Clock Signal |      Enable Signal     | Set/Reset Signal | Slice Load Count | Bel Load Count |
-+---------------+------------------------+------------------+------------------+----------------+
-|  sys_clk_BUFG | uut/sof_out_i_1_n_0    |                  |                1 |              1 |
-|  sys_clk_BUFG |                        |                  |                3 |              5 |
-|  sys_clk_BUFG | uut/counter[7]_i_1_n_0 |                  |                4 |              8 |
-|  sys_clk_BUFG | uut/x2_s4_0            |                  |                6 |              8 |
-|  sys_clk_BUFG | uut/x1_s2_1            |                  |                7 |              9 |
-|  sys_clk_BUFG | uut/x1_s3_2            |                  |               11 |             27 |
-|  sys_clk_BUFG | uut/x2_s3_3            |                  |               15 |             35 |
-|  sys_clk_BUFG | uut/pm_fetched         |                  |               22 |             43 |
-+---------------+------------------------+------------------+------------------+----------------+
++---------------+----------------------+------------------+------------------+----------------+
+|  Clock Signal |     Enable Signal    | Set/Reset Signal | Slice Load Count | Bel Load Count |
++---------------+----------------------+------------------+------------------+----------------+
+|  sys_clk_BUFG | uut/sof_out_i_1_n_0  |                  |                1 |              1 |
+|  sys_clk_BUFG |                      |                  |                4 |              6 |
+|  sys_clk_BUFG | uut/x2_s4_2          |                  |                3 |              8 |
+|  sys_clk_BUFG | uut/counter_0        |                  |                5 |              8 |
+|  sys_clk_BUFG | uut/x1_s2[8]_i_1_n_0 |                  |                6 |              9 |
+|  sys_clk_BUFG | uut/x1_s3_3          |                  |                9 |             26 |
+|  sys_clk_BUFG | uut/x2_s3_1          |                  |               13 |             35 |
+|  sys_clk_BUFG | sof_IBUF             |                  |               17 |             43 |
++---------------+----------------------+------------------+------------------+----------------+
 
 

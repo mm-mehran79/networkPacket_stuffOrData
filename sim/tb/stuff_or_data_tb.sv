@@ -25,14 +25,13 @@ module stuff_or_data_tb #(
         for (int i=0; i<NO_OF_TEST; i++) begin
             pm = $urandom_range(2,2 ** MPT_W - 1);
             cm = $urandom_range(2,pm);
+            //sof = $urandom%2;
             sof = 1;
             valid_in = 0;
-            @(negedge clk);
-            sof = 0;
             for (int j=1; j <= pm; ++j) begin
-                sof = 0;
-                valid_in = 1;
-                /*valid_in = $urandom%2;
+                //sof = $urandom%2;
+                //valid_in = 1;
+                valid_in = $urandom%2;
                 while (valid_in == 1'b0) begin
                     @(negedge clk);
                     if (0 != uut.ds) begin
@@ -44,9 +43,8 @@ module stuff_or_data_tb #(
                         $stop;
                     end
                     valid_in = $urandom%2;
-                end*/
+                end
                 @(negedge clk);
-
                 if ((j * cm) % pm < cm) ds = 1'b1;
                 else ds = 1'b0;
                 if (ds !== uut.ds) begin 
@@ -67,6 +65,9 @@ module stuff_or_data_tb #(
         .valid_in(valid_in),
         .sof_out(),
         .valid_out(),
+        .err_sof_early(),
+        .err_sof_late(),
+        .input_err(),
         .ds()
     );
 endmodule
